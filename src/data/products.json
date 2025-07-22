@@ -1,0 +1,182 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Wireless Bluetooth Earbuds",
+    "description": "High-fidelity sound, comfortable fit, and 24-hour battery life with charging case.",
+    "price": 79.99,
+    "category": "Electronics",
+    "image": "/images/image1.png",
+    "stock": 50
+  },
+  {
+    "id": "prod_002",
+    "name": "Smartwatch Pro 2.0",
+    "description": "Track your fitness, receive notifications, and make calls from your wrist.",
+    "price": 199.99,
+    "category": "Electronics",
+    "image": "/images/image2.png",
+    "stock": 30
+  },
+  {
+    "id": "prod_003",
+    "name": "Portable Power Bank 20000mAh",
+    "description": "Keep your devices charged on the go with this high-capacity power bank.",
+    "price": 35.50,
+    "category": "Electronics",
+    "image": "/images/image3.png",
+    "stock": 75
+  },
+  {
+    "id": "prod_004",
+    "name": "Organic Cotton T-Shirt",
+    "description": "Soft and breathable, made from 100% organic cotton for ultimate comfort.",
+    "price": 24.00,
+    "category": "Apparel",
+    "image": "/images/image4.png",
+    "stock": 120
+  },
+  {
+    "id": "prod_005",
+    "name": "Classic Denim Jeans",
+    "description": "Durable and stylish, a timeless addition to any wardrobe.",
+    "price": 59.99,
+    "category": "Apparel",
+    "image": "/images/image5.png",
+    "stock": 80
+  },
+  {
+    "id": "prod_006",
+    "name": "Winter Puffer Jacket",
+    "description": "Stay warm and cozy with this insulated puffer jacket, perfect for cold weather.",
+    "price": 89.00,
+    "category": "Apparel",
+    "image": "/images/image6.png",
+    "stock": 40
+  },
+  {
+    "id": "prod_007",
+    "name": "Stainless Steel Water Bottle",
+    "description": "Eco-friendly and keeps drinks cold for 24 hours or hot for 12 hours.",
+    "price": 18.75,
+    "category": "Home Goods",
+    "image": "/images/image7.png",
+    "stock": 150
+  },
+  {
+    "id": "prod_008",
+    "name": "Aromatherapy Diffuser",
+    "description": "Create a calming atmosphere with this ultrasonic essential oil diffuser.",
+    "price": 45.00,
+    "category": "Home Goods",
+    "image": "/images/image8.png",
+    "stock": 60
+  },
+  {
+    "id": "prod_009",
+    "name": "Ergonomic Office Chair",
+    "description": "Maximize comfort and support during long work hours with this adjustable chair.",
+    "price": 249.00,
+    "category": "Home Goods",
+    "image": "/images/image9.png",
+    "stock": 20
+  },
+  {
+    "id": "prod_010",
+    "name": "Fiction Novel: The Last Byte",
+    "description": "An enthralling sci-fi adventure that will keep you on the edge of your seat.",
+    "price": 15.99,
+    "category": "Books",
+    "image": "/images/image10.png",
+    "stock": 90
+  },
+  {
+    "id": "prod_011",
+    "name": "Cookbook: Global Flavors",
+    "description": "Explore culinary traditions from around the world with easy-to-follow recipes.",
+    "price": 28.50,
+    "category": "Books",
+    "image": "/images/image11.png",
+    "stock": 70
+  },
+  {
+    "id": "prod_012",
+    "name": "Kids' Building Blocks Set",
+    "description": "Encourage creativity and fine motor skills with this colorful block set.",
+    "price": 32.00,
+    "category": "Toys",
+    "image": "/images/image12.png",
+    "stock": 100
+  },
+  {
+    "id": "prod_013",
+    "name": "Yoga Mat with Carrying Strap",
+    "description": "Non-slip and cushioned, perfect for yoga, Pilates, and floor exercises.",
+    "price": 29.99,
+    "category": "Sports & Outdoors",
+    "image": "/images/image13.png",
+    "stock": 65
+  },
+  {
+    "id": "prod_014",
+    "name": "Hiking Backpack 30L",
+    "description": "Lightweight and durable, ideal for day hikes and outdoor adventures.",
+    "price": 75.00,
+    "category": "Sports & Outdoors",
+    "image": "/images/image14.png",
+    "stock": 35
+  },
+  {
+    "id": "prod_015",
+    "name": "Wireless Gaming Mouse",
+    "description": "Precision tracking and customizable buttons for an enhanced gaming experience.",
+    "price": 65.00,
+    "category": "Electronics",
+    "image": "/images/image15.png",
+    "stock": 45
+  },
+  {
+    "id": "prod_016",
+    "name": "Bluetooth Speaker Mini",
+    "description": "Compact design with powerful sound, perfect for on-the-go music.",
+    "price": 49.99,
+    "category": "Electronics",
+    "image": "/images/image16.png",
+    "stock": 90
+  },
+  {
+    "id": "prod_017",
+    "name": "Linen Bed Sheets Set",
+    "description": "Luxuriously soft and breathable linen sheets for a comfortable night's sleep.",
+    "price": 110.00,
+    "category": "Home Goods",
+    "image": "/images/image17.png",
+    "stock": 25
+  },
+  {
+    "id": "prod_018",
+    "name": "Dog Chew Toy",
+    "description": "Durable and non-toxic chew toy, great for dental health and entertainment.",
+    "price": 12.50,
+    "category": "Pet Supplies",
+    "image": "/images/image18.png",
+    "stock": 180
+  },
+  {
+    "id": "prod_019",
+    "name": "Art Sketchbook Set",
+    "description": "High-quality paper and essential tools for aspiring artists.",
+    "price": 22.00,
+    "category": "Arts & Crafts",
+    "image": "/images/image19.png",
+    "stock": 70
+  },
+  {
+    "id": "prod_020",
+    "name": "Coffee Maker Drip",
+    "description": "Wake up to freshly brewed coffee with this easy-to-use drip coffee maker.",
+    "price": 55.00,
+    "category": "Home Goods",
+    "image": "/images/image20.png",
+    "stock": 55
+  }
+]
