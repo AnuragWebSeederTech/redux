@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart, setSelectedProduct } from '../redux/ecommerceSlice'; // Import from ecommerceSlice
+import { addToCart, setSelectedProduct } from '../redux/ecommerceSlice';
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -14,25 +14,39 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="bg-white border border-gray-100 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col font-primary"> {/* Added font-primary */}
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-48 object-cover cursor-pointer"
-        onClick={handleViewDetails}
-      />
-      <div className="p-4 flex flex-col flex-grow">
+    <div className="group bg-white/80 backdrop-blur-sm border border-white/50 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-white flex flex-col font-primary relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      
+      <div className="relative overflow-hidden rounded-t-2xl">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-56 object-cover cursor-pointer transition-transform duration-500 group-hover:scale-110"
+          onClick={handleViewDetails}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      
+      <div className="p-6 flex flex-col flex-grow relative z-10">
         <h3
-          className="text-lg font-semibold text-gray-900 mb-1 cursor-pointer hover:text-teal-600 transition-colors duration-200" // Teal hover color
+          className="text-lg font-bold text-slate-800 mb-2 cursor-pointer hover:text-purple-600 transition-colors duration-300 line-clamp-2 group-hover:text-purple-600"
           onClick={handleViewDetails}
         >
           {product.name}
         </h3>
-        <p className="text-amber-600 font-bold mb-2 text-xl">${product.price}</p>
-        <p className="text-gray-500 text-sm mb-4 flex-grow">{product.category}</p>
+        
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            ${product.price}
+          </p>
+          <span className="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded-full uppercase tracking-wide">
+            {product.category}
+          </span>
+        </div>
+        
         <button
           onClick={handleAddToCart}
-          className="mt-auto bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-200"
+          className="mt-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
         >
           Add to Cart
         </button>
