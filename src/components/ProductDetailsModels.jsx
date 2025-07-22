@@ -1,4 +1,3 @@
-// src/components/ProductDetailsModal.js
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedProduct, addToCart } from '../redux/ecommerceSlice'; // Import from ecommerceSlice
@@ -17,7 +16,6 @@ function ProductDetailsModal() {
 
   const handleAddToCartFromModal = () => {
     dispatch(addToCart(selectedProduct));
-    handleCloseModal(); // Optionally close modal after adding to cart
   };
 
   return (

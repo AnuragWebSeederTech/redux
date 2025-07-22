@@ -1,7 +1,5 @@
-// src/components/Cart.js
-import React from 'react'; // useEffect is no longer needed here as saving is in store.js
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, updateCartQuantity } from '../redux/ecommerceSlice'; // Import from ecommerceSlice
+import { removeFromCart, updateCartQuantity } from '../redux/ecommerceSlice';
 
 function Cart() {
   const dispatch = useDispatch();
@@ -27,7 +25,7 @@ function Cart() {
         <p className="text-gray-600">Your cart is empty.</p>
       ) : (
         <>
-          <div className="space-y-4 max-h-96 overflow-y-auto mb-4"> {/* Added max-h and overflow */}
+          <div className="space-y-4 max-h-96 overflow-y-auto mb-4">
             {cartItems.map(item => (
               <div key={item.id} className="flex items-center space-x-4 border-b pb-4 last:border-b-0 last:pb-0">
                 <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-md" />
@@ -39,7 +37,7 @@ function Cart() {
                     <input
                       type="number"
                       id={`qty-${item.id}`}
-                      min="0" // Allow 0 to remove item
+                      min="0"
                       value={item.quantity}
                       onChange={(e) => handleQuantityChange(item.id, e)}
                       className="w-16 px-2 py-1 border border-gray-300 rounded text-center text-sm"

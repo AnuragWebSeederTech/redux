@@ -43,11 +43,11 @@ function Filters() {
           type="range"
           id="priceRange"
           min="0"
-          max="1000" // Adjust max based on your product prices
+          max="1000"
           step="10"
           value={currentFilters.priceRange[1]}
           onChange={handlePriceChange}
-          className="w-full h-3 bg-gray-200 rounded-lg cursor-pointer range-sm accent-blue-500"
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-600 focus:outline-none transition-all duration-200"
         />
         <span className="text-gray-700 text-sm mt-1 block">${currentFilters.priceRange[1]}</span>
       </div>
