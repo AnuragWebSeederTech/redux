@@ -16,13 +16,14 @@ function ProductCard({ product }) {
   return (
     <div className="group bg-white/80 backdrop-blur-sm border border-white/50 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-white flex flex-col font-primary relative">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-      
-      <div className="relative overflow-hidden rounded-t-2xl">
+      <div 
+        className="relative overflow-hidden rounded-t-2xl cursor-pointer" 
+        onClick={handleViewDetails}
+      >
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-56 object-cover cursor-pointer transition-transform duration-500 group-hover:scale-110"
-          onClick={handleViewDetails}
+          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
