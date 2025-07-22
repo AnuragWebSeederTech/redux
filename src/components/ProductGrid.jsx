@@ -13,7 +13,7 @@ function ProductGrid() {
   });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 lg:w-300">
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
           Products
