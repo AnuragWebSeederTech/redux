@@ -48,7 +48,7 @@ function App() {
               <aside className="lg:col-span-1 bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-white/50 lg:h-fit lg:sticky lg:top-28 hover:shadow-2xl transition-all duration-300">
                 <Filters />
               </aside>
-              <section className="lg:col-span-4 lg:w-317 bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/50 hover:shadow-2xl transition-all duration-300">
+              <section className="lg:col-span-4 bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/50 hover:shadow-2xl transition-all duration-300">
                 <ProductGrid />
               </section>
             </main>
