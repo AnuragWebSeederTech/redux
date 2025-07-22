@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, updateCartQuantity } from '../redux/ecommerceSlice';
 
@@ -8,14 +9,20 @@ function Cart() {
   const cartTotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   const handleRemoveItem = (productId) => {
+    console.log("Attempting to remove item:", productId); 
     dispatch(removeFromCart(productId));
   };
 
-  const handleQuantityChange = (productId, event) => {
-    const newQuantity = parseInt(event.target.value);
-    if (!isNaN(newQuantity) && newQuantity >= 0) { // Ensure it's a valid non-negative number
-        dispatch(updateCartQuantity(productId, newQuantity));
+  const handleQuantityChange = (productId, newQuantity) => {
+    console.log("handleQuantityChange called. Product ID:", productId, "New Quantity:", newQuantity); 
+
+    if (isNaN(newQuantity) || newQuantity < 0) {
+      console.warn("Invalid quantity detected. Setting to 0. Removing item."); 
+      dispatch(removeFromCart(productId));
+      return;
     }
+
+    dispatch(updateCartQuantity({ productId, quantity: newQuantity }));
   };
 
   return (
@@ -33,15 +40,39 @@ function Cart() {
                   <h3 className="font-medium text-gray-900">{item.name}</h3>
                   <p className="text-gray-600 text-sm">${item.price.toFixed(2)}</p>
                   <div className="flex items-center mt-1">
-                    <label htmlFor={`qty-${item.id}`} className="text-gray-700 text-sm mr-2">Qty:</label>
+                    <button
+                      onClick={() => {
+                        console.log("Decrement button clicked for:", item.id); 
+                        if (item.quantity === 1) {
+                          handleRemoveItem(item.id);
+                        } else {
+                          handleQuantityChange(item.id, item.quantity - 1);
+                        }
+                      }}
+                      className="bg-gray-200 text-gray-700 px-2 py-1 rounded-l text-sm hover:bg-gray-300 transition duration-150"
+                      
+                    >
+                      -
+                    </button>
                     <input
                       type="number"
-                      id={`qty-${item.id}`}
-                      min="0"
+                      min="0" 
                       value={item.quantity}
-                      onChange={(e) => handleQuantityChange(item.id, e)}
-                      className="w-16 px-2 py-1 border border-gray-300 rounded text-center text-sm"
+                      onChange={(e) => {
+                          console.log("Input changed for:", item.id, "Value:", e.target.value);
+                          handleQuantityChange(item.id, parseInt(e.target.value));
+                      }}
+                      className="w-12 text-center border-t border-b border-gray-300 py-1 text-sm focus:outline-none"
                     />
+                    <button
+                      onClick={() => {
+                          console.log("Increment button clicked for:", item.id);
+                          handleQuantityChange(item.id, item.quantity + 1);
+                      }}
+                      className="bg-gray-200 text-gray-700 px-2 py-1 rounded-r text-sm hover:bg-gray-300 transition duration-150"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <button
